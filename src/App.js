@@ -198,15 +198,15 @@ class App extends Component {
             open={this.state.calculate}
             onClose={()=>this.setState({calculate : false})}
           >
-           <DialogTitle id="alert-dialog-slide-title" variant="h3">
-            {"ผลการทำนาย : " }
+           <DialogTitle id="alert-dialog-slide-title" variant="h3" style={{textAlign: "center"}}>
+            {"ผลการทำนาย  : " }
             <Typography style={{display : "inline"}} variant="h3" component="h5">
-              { (this.state.play ? "เล่น" : "ไม่เล่น!!")}
+              { (this.state.play ? "เล่น!!" : "ไม่เล่น!!")}
             </Typography>
           </DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-slide-description" >
-              
+           
             </DialogContentText>
           </DialogContent>
           </Dialog>
@@ -215,19 +215,19 @@ class App extends Component {
           {this.state.loading == true ?
           
           <Dialog
-            fullScreen
+            
             open={this.state.loading}
             
           >
-            <div  style={{height :"100%" , width :"100%",backgroundColor : "rgb(153,153,153)" }}>
-            <div style={{textAlign :"center" , marginTop : "300px" ,opacity : 0.5}}>
+            <div  style={{height :"100%" , width :"100%", }}>
+            <div style={{textAlign :"center" , marginTop : "30px" ,}}>
                 <BeatLoader 
                     loading={this.state.loading}
                     sizeUnit={"px"}
                     size={30}
-                    color={'#ffffff'}
+                    color={'#000000'}
                 />
-                <Typography style={{color :"white",textAlign : "center" , padding : "30px" , fontWeight :"bold"}} variant="h5" component="h5">
+                <Typography style={{textAlign : "center" , padding : "30px" , fontWeight :"bold"}} variant="h5" component="h5">
                  Loading...
                 </Typography>
                 </div> 
@@ -287,8 +287,8 @@ class App extends Component {
                         onChange={(e)=>this.onBuyGame(e)}
                         style={{flexDirection : "column"}}
                       >
-                        <FormControlLabel value={true} control={<Radio />} label="Buy" />
-                        <FormControlLabel value={false} control={<Radio />} label="NoBuy" />
+                        <FormControlLabel value={true} control={<Radio />} label="ซื้อ" />
+                        <FormControlLabel value={false} control={<Radio />} label="ไม่ซื้อ" />
                       
                       </RadioGroup>
                     </FormControl>
@@ -304,8 +304,8 @@ class App extends Component {
                         onChange={(e)=>this.onDoYouPlayMoba(e)}
                         style={{flexDirection : "column"}}
                       >
-                        <FormControlLabel value={true} control={<Radio />} label="Buy" />
-                        <FormControlLabel value={false} control={<Radio />} label="NoBuy" />
+                        <FormControlLabel value={true} control={<Radio />} label="เล่น" />
+                        <FormControlLabel value={false} control={<Radio />} label="ไม่เล่น" />
                       
                       </RadioGroup>
                     </FormControl>
@@ -325,8 +325,8 @@ class App extends Component {
                         onChange={(e)=>this.onDoYouknowFps(e)}
                         style={{flexDirection : "column"}}
                       >
-                        <FormControlLabel value={true} control={<Radio />} label="Buy" />
-                        <FormControlLabel value={false} control={<Radio />} label="NoBuy" />
+                        <FormControlLabel value={true} control={<Radio />} label="รู้จัก" />
+                        <FormControlLabel value={false} control={<Radio />} label="ไม่รู้จัก" />
                       
                       </RadioGroup>
                     </FormControl>
@@ -342,8 +342,8 @@ class App extends Component {
                         onChange={(e)=>this.onDoYouPlayFps(e)}
                         style={{flexDirection : "column"}}
                       >
-                        <FormControlLabel value={true} control={<Radio />} label="Buy" />
-                        <FormControlLabel value={false} control={<Radio />} label="NoBuy" />
+                        <FormControlLabel value={true} control={<Radio />} label="เล่น" />
+                        <FormControlLabel value={false} control={<Radio />} label="ไม่เล่น" />
                       
                       </RadioGroup>
                     </FormControl>
